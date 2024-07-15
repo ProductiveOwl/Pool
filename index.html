@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title> Pool! </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <h1>Pool!</h1>
+    <p>Enter the names of both players. Then, make a shot by holding down the cueball and drag the mouse to aim.</p>
+    <h3 id="winner">Winner: ?</h3>
+    <div id="players">
+      <table>
+        <tbody>
+          <tr>
+            <th id="player1Name">Player 1</th>
+            <th id="player2Name">Player 2</th>
+          </tr>
+          <tr>
+          <form action="players.html" method="post">
+            <td id="player1Stats">
+              <input type="text" id="p1" name="p1" size="20" />
+              <ul>
+                <li>Points: </li>
+              </ul>
+            </td>
+            <td id="player2Stats">
+              <input type="text" id="p2" name="p2" size="20" />
+              <ul>
+                <li>Points: </li>
+              </ul>
+            </td>
+            <input type="submit" value="Submit"/>
+          </form>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <form action="shoot.html" method="post" id="shot">
+      <h3>It is </h3><h2 id="currentTurn">___</h2><h3>'s Turn</h3>
+      <h3 id="xVel">x: </h3>
+      <h3 id="yVel">y: </h3>
+      <input type="hidden" id="xInput" name="xInput" size="20" value="0">
+      <input type="hidden" id="yInput" name="yInput" size="20" value="0"/>
+      <input type="hidden" id="current" name="current" size="20" value="0"/>
+      <input type="hidden" id="ballType" name="ballType" size="1" value="0"/>
+    </form>
+    <div id="poolTable">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+      "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg id="svgPoolTable" width="700" height="1375" viewBox="-25 -25 1400 2750"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <rect width="1350" height="2700" x="0" y="0" fill="#C0D0C0" /> 
+      <rect width="1400" height="25" x="-25" y="0" fill="darkgreen" />
+      <rect width="1400" height="25" x="-25" y="2700" fill="darkgreen" />
+      <rect width="25" height="2750" x="0" y="-25" fill="darkgreen" />
+      <rect width="25" height="2750" x="1350" y="-25" fill="darkgreen" />
+      <circle cx="0" cy="0" r="114" fill="black" />
+      <circle cx="0" cy="1350" r="114" fill="black" />
+      <circle cx="0" cy="2700" r="114" fill="black" />
+      <circle cx="1350" cy="0" r="114" fill="black" />
+      <circle cx="1350" cy="1350" r="114" fill="black" />
+      <circle cx="1350" cy="2700" r="114" fill="black" />
+      <circle cx="675" cy="675" r="28" fill="YELLOW" />
+      <circle cx="644" cy="622" r="28" fill="BLUE" />
+      <circle cx="704" cy="623" r="28" fill="RED" />
+      <circle cx="612" cy="571" r="28" fill="PURPLE" />
+      <circle cx="675" cy="571" r="28" fill="ORANGE" />
+      <circle cx="735" cy="571" r="28" fill="GREEN" />
+      <circle cx="575" cy="520" r="28" fill="BROWN" />
+      <circle cx="644" cy="520" r="28" fill="BLACK" />
+      <circle cx="707" cy="518" r="28" fill="LIGHTYELLOW"/>
+      <circle cx="770" cy="520" r="28" fill="LIGHTBLUE"/>
+      <circle cx="540" cy="470" r="28" fill="PINK"/>
+      <circle cx="610" cy="470" r="28" fill="MEDIUMPURPLE"/>
+      <circle cx="678" cy="465" r="28" fill="LIGHTSALMON"/>
+      <circle cx="750" cy="465" r="28" fill="LIGHTGREEN"/>
+      <circle cx="815" cy="468" r="28" fill="SANDYBROWN"/>
+      <circle cx="674" cy="2025" r="28" fill="WHITE" />
+      </svg>
+    </div>
+  </body>
+</html>
